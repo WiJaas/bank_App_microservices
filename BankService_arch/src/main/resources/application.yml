@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: auth-service
+  devtools:
+    restart:
+      enabled: true
+
+  config:
+    import: optional:configserver:http://localhost:9101

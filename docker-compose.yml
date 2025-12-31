@@ -1,0 +1,28 @@
+services:
+  mysql-auth:
+    image: mysql:8.0.36
+    container_name: auth-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: auth_db
+    ports:
+      - "3309:3306"
+    volumes:
+      - mysql_auth_data:/var/lib/mysql
+
+  mysql-account:
+    image: mysql:8.0.36
+    container_name: account-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: account_db
+    ports:
+      - "3310:3306"
+    volumes:
+      - mysql_account_data:/var/lib/mysql
+
+volumes:
+  mysql_auth_data:
+  mysql_account_data:
