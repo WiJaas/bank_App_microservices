@@ -1,0 +1,73 @@
+/* --- Logo Banner --- */
+.navbar-logo-banner {
+  background-color: #f8f9fa;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 1030;
+}
+
+.navbar-logo-banner img {
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* --- Navbar --- */
+.navbar {
+  background-color: #5784ba;
+  z-index: 1029;
+}
+
+.navbar .navbar-brand {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .navbar-brand i {
+  font-size: 1.2rem;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: white !important;
+  font-size: 1rem;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: #f8f9fa !important;
+}
+
+.navbar .navbar-nav .navbar-text {
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.navbar .navbar-nav .badge {
+  font-size: 0.85rem;
+}
+
+/* Logout Button */
+.navbar .btn-outline-light {
+  font-weight: 600;
+  padding: 0.35rem 1rem;
+  border-radius: 0.75rem;
+}
+
+.navbar .btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Adjustments for small screens */
+@media (max-width: 992px) {
+  .navbar-logo-banner {
+    height: 80px;
+  }
+  .navbar .navbar-brand {
+    font-size: 1.25rem;
+  }
+}

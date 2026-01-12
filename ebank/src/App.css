@@ -1,0 +1,338 @@
+/* =========================
+   Global Styles
+========================= */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+  color: #1f2937;
+}
+
+/* =========================
+   Containers
+========================= */
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* =========================
+   Headings
+========================= */
+.card h2,
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   Forms
+========================= */
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+.form-inline {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-inline .input-field {
+  flex: 1;
+}
+
+/* =========================
+   Buttons
+========================= */
+.btn {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: #6366f1;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #4f46e5;
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  color: #6366f1;
+  border: 2px solid #6366f1;
+}
+
+.btn-outline-primary:hover {
+  background-color: #6366f1;
+  color: white;
+}
+
+/* =========================
+   Cards
+========================= */
+.card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.card-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.project-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-card-body {
+  padding: 1.5rem;
+}
+
+.project-card h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   Footer Text
+========================= */
+.footer-text {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.footer-text span {
+  color: #6366f1;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* =========================
+   Project Details
+========================= */
+.project-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.project-description {
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Task list */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.task-item {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+  transition: transform 0.2s;
+}
+
+.task-item:hover {
+  transform: translateY(-2px);
+}
+
+.task-item span {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.task-status {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6b7280;
+  margin-left: 0.5rem;
+}
+
+/* Task form */
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task-form .input-field,
+.task-form textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.task-form .input-field:focus,
+.task-form textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+.task-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Complete button */
+.btn-complete {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #10b981;
+  color: white;
+  transition: all 0.2s;
+}
+
+.btn-complete:hover {
+  background-color: #059669;
+}
+
+/* =========================
+   Back Button
+========================= */
+.back-button-container {
+  margin-bottom: 1.5rem;
+}
+
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  border: none;
+  background-color: #e5e7eb;
+  color: #1f2937;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-back:hover {
+  background-color: #d1d5db;
+}
+.btn-back:active {
+  transform: scale(0.95);
+}
+
+/* =========================
+   Navbar Styling
+========================= */
+.navbar {
+  background-color: #6366f1;  /* main color */
+  padding: 1rem 2rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+}
+
+.app-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.btn-logout {
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  border: none;
+  background-color: #ef4444; /* red for logout */
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-logout:hover {
+  background-color: #dc2626;
+}
+.btn-logout:active {
+  transform: scale(0.95);
+}
