@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 
 public record AccountResponse(
         Long id,
-        Integer accountNumber,
+        Integer rib,
         Long clientId,
         BigDecimal balance,
         AccountType type,

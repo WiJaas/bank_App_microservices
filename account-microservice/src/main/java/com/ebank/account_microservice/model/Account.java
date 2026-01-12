@@ -21,7 +21,7 @@ public class Account {
     private Long id;
 
     @Column(nullable = false, unique = true, length = 30)
-    private Integer accountNumber;
+    private Integer rib;
 
     @Column(nullable = false)
     private Long clientId;   // ID from Client in Auth-Customer MS

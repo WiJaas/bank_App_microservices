@@ -1,6 +1,5 @@
 package com.ebank.account_microservice.model;
 
-
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -26,7 +25,7 @@ public class Transaction {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
-    private TransactionType type; // CREDIT / DEBIT
+    private TransactionType type;
 
     @Column(nullable = false)
     private BigDecimal amount;

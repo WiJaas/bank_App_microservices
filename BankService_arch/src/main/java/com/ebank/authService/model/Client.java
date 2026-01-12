@@ -1,11 +1,16 @@
 package com.ebank.authService.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
+
 import java.time.LocalDate;
 
 @Entity
-@Data
+@Getter
+@Setter
+@ToString(exclude = "user")
+@EqualsAndHashCode(exclude = "user")
 @Table(
         name = "clients",
         uniqueConstraints = {
@@ -42,6 +47,7 @@ public class Client {
 
     @OneToOne
     @JoinColumn(name = "user_id", nullable = false, unique = true)
+    @JsonIgnore
     private User user;
 
 }

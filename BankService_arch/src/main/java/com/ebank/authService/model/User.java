@@ -1,5 +1,6 @@
 package com.ebank.authService.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -35,6 +36,11 @@ public class User {
 
     @Column(nullable = false)
     private boolean enabled = true;
+
+
+    @OneToOne(mappedBy = "user")
+    @JsonBackReference
+    private Client client;
 
 
     @ManyToMany(fetch = FetchType.EAGER)

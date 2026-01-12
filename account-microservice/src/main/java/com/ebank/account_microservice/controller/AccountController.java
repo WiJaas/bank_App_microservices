@@ -32,4 +32,6 @@ public class AccountController {
     public List<AccountResponse> getAccountsByClient(@PathVariable Long clientId) {
         return accountService.getAccountsByClient(clientId);
     }
+
+
 }

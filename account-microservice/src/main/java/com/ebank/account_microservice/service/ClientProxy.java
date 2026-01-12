@@ -11,6 +11,6 @@ public interface ClientProxy {
     @GetMapping("/clients/{id}")
     ClientDto getClientById(@PathVariable("id") Long id);
 
-    @GetMapping("/clients/cin/{cin}")
+    @GetMapping("/clients/by-cin/{cin}")
     ClientDto getClientByCin(@PathVariable("cin") String cin);   // ← NEW
 }
